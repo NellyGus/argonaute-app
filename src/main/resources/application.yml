@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: wcs-dev-tech-challenge
+  datasource:
+    username: dmjqthhdrltgeo # datasource username
+    password: 8bd9787ca6308c97ff78cdc2bd81aa3b145070032b40a9cc8d3780085619461e # datasource password
+    url: postgres://dmjqthhdrltgeo:8bd9787ca6308c97ff78cdc2bd81aa3b145070032b40a9cc8d3780085619461e@ec2-52-7-228-45.compute-1.amazonaws.com:5432/dekav8al24nb8u
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-test-query: "SELECT 1"
+      max-lifetime: 1800000
+      idle-timeout: 600000
+      leak-detection-threshold: 60000
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#server:
+  #port: 8081
